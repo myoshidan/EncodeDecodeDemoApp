@@ -1,0 +1,25 @@
+﻿<Controls:MetroWindow x:Class="EncodeDecodeDemoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EncodeDecodeDemoApp"
+        mc:Ignorable="d"
+        Title="Base64 Encode/Decodeアプリ" Height="500" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="10,10,10,0" Orientation="Vertical" HorizontalAlignment="Stretch" Grid.Row="0">
+            <Label x:Name="label" FontSize="16" Content="Encode/Decodeしたい文字を入力してください"/>
+            <TextBox x:Name="input" Text="aaa" FontSize="24" Margin="0,10,0,10" MinHeight="20"></TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="encode" Content="↓Encode" HorizontalAlignment="Center" Width="180" Height="30" Margin="0,0,5,0" Click="encode_Click"/>
+                <Button x:Name="decode" Content="↑Decode" HorizontalAlignment="Center" Width="180" Height="30" Margin="5,0,0,0" Click="decode_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <TextBox Grid.Row="1" x:Name="result" Text="" Margin="10"  HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="16"/>
+    </Grid>
+</Controls:MetroWindow>
